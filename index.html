@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>One-Page Website</title>
+    <title>Responsive One-Page Website</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
@@ -18,6 +18,9 @@
             color: white;
             text-decoration: none;
             padding: 10px;
+        }
+        nav a:hover {
+            text-decoration: underline;
         }
         section {
             padding: 60px 0;
@@ -34,12 +37,36 @@
         .services i {
             font-size: 50px;
             color: #007bff;
+            margin-bottom: 15px;
+        }
+        .portfolio img {
+            transition: transform 0.3s ease-in-out;
+        }
+        .portfolio img:hover {
+            transform: scale(1.05);
         }
         footer {
             background-color: #333;
             color: white;
             text-align: center;
             padding: 20px 0;
+        }
+        @media (max-width: 768px) {
+            .hero {
+                height: 70vh;
+                padding: 20px;
+            }
+            .services i {
+                font-size: 40px;
+            }
+        }
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 24px;
+            }
+            .hero p {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -103,10 +130,10 @@
     <section id="portfolio">
         <div class="container">
             <h2 class="text-center">Portfolio</h2>
-            <div class="row">
-                <div class="col-md-4"><img src="https://via.placeholder.com/300" class="img-fluid" alt=""></div>
-                <div class="col-md-4"><img src="https://via.placeholder.com/300" class="img-fluid" alt=""></div>
-                <div class="col-md-4"><img src="https://via.placeholder.com/300" class="img-fluid" alt=""></div>
+            <div class="row portfolio">
+                <div class="col-md-4 col-sm-6 mb-4"><img src="https://via.placeholder.com/300" class="img-fluid" alt="Portfolio item"></div>
+                <div class="col-md-4 col-sm-6 mb-4"><img src="https://via.placeholder.com/300" class="img-fluid" alt="Portfolio item"></div>
+                <div class="col-md-4 col-sm-6 mb-4"><img src="https://via.placeholder.com/300" class="img-fluid" alt="Portfolio item"></div>
             </div>
         </div>
     </section>
